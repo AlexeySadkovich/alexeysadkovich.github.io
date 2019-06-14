@@ -1,0 +1,124 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+.main-container {
+	background-image: url("../back.jpg");
+	background-size: contain;
+	background-attachment: fixed;
+} 
+
+.main-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	color: #FFF;
+	transition: 0.6s;
+}
+
+.main-page-active-skills {
+	transform: translateY(10vh);
+}
+
+.main-page-active-links {
+	transform: translateY(-10vh);
+}
+
+.info {
+	margin-right: 20px;
+	margin-left: 20px;
+
+}
+
+.main-page a {
+	display: inline-block;
+	text-decoration: none;
+	margin: 10px;
+	color: #FFF;
+	font-size: 1.5em;
+	width: 100px;
+	text-align: center;
+	transition: 0.5s;
+}
+
+.main-page a:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #000000;
+}
+
+.show-links-active {
+	border-bottom: 1px solid #FFF;
+}
+
+.show-skills-active {
+	border-bottom: 1px solid #FFF;
+}
+
+
+.skills-page {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10vh;
+	width: 100%;
+	padding: 10px;
+	background: rgba(255, 255, 255, 0.8);
+	color: #000000;
+	transition: 0.6s;
+	transform: translateY(-100%); 
+}
+
+.skills-page-active {
+	transform: translateY(0);
+}
+
+.skills-page p {
+	margin: 10px;
+}
+
+.progress-ring__circle {
+	transform-origin: center;
+	transform: rotate(-90deg);
+	transition: stroke-dashoffset 0.8s;
+}
+
+.links-page {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: row;
+	height: 10vh;
+	width: 100%;
+	padding: 15px;
+	background: rgba(255, 255, 255, 0.8);
+	transition: 0.6s;
+	transform: translateY(110%); 
+}
+
+.links-page-active {
+	transform: translateY(0);
+}
+
+.links-page a {
+	width: 70px;
+	margin: 0 10px;
+}
+
+.links-page a img {
+	width: 100%;
+}
