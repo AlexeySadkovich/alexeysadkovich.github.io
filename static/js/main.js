@@ -2,6 +2,9 @@ var skillsOpen = false;
 var linksOpen  = false;
 
 const defaultView = () => {
+	//Particles 
+	$(".project-page #particles-js").id = "particles-js-nonactive";
+	$(".about-page #particles-js").id = "particles-js-nonactive";
 
 	//Default main page
 	$(".main-page").removeClass("main-page-active-skills");
@@ -89,7 +92,8 @@ $(".show-main").on("click", e =>  {
 
 $(".show-projects").on("click", e =>  {
 	defaultView();
-	$(".main-page").toggleClass("main-page-active-projects")
+	$(".projects-page #particles-js-nonactive").id = "particles-js";
+	$(".main-page").toggleClass("main-page-active-projects");
 	$(".projects-page").toggleClass("projects-page-active");
 });
 
@@ -102,6 +106,7 @@ $(".show-main").on("click", e =>  {
 
 $(".show-about").on("click", e =>  {
 	defaultView();
-	$(".main-page").toggleClass("main-page-active-about")
+	$(".about-page #particles-js-nonactive").id = "particles-js";
+	$(".main-page").toggleClass("main-page-active-about");
 	$(".about-page").toggleClass("about-page-active");
 });
