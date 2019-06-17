@@ -9,7 +9,7 @@ body, html {
 	font-family: 'Saira Semi Condensed', sans-serif;
 }
 
-#particles-js{
+.particles-js{
     position: fixed;
     top: 0;
     left: 0;
@@ -230,8 +230,9 @@ body, html {
 	transform: translateX(0);
 }
 
-.about-page-active .show-main,
-.about-page-active .container {
+.show-main,
+.about-page-active .container,
+.projects-page-active .container {
 	z-index: 99;	
 }
 
