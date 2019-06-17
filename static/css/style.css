@@ -9,15 +9,6 @@ body, html {
 	font-family: 'Saira Semi Condensed', sans-serif;
 }
 
-.particles-js{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
 .main-container {
 	background-image: url("../back.jpg");
 	background-size: cover;
@@ -230,12 +221,6 @@ body, html {
 	transform: translateX(0);
 }
 
-.show-main,
-.about-page-active .container,
-.projects-page-active .container {
-	z-index: 99;	
-}
-
 /*------------------
   SOME OTHER STUFF
 ------------------*/
@@ -271,4 +256,20 @@ body, html {
 .btn-secondary:hover {
 	background-color: rgba(0, 0, 0, 1);
 	color: #FFF;
+}
+
+.about-page .particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.side-container {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	z-index: 99;
 }
