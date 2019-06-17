@@ -93,6 +93,7 @@ $(".show-main").on("click", e =>  {
 $(".show-projects").on("click", e =>  {
 	defaultView();
 	$(".projects-particles").attr("id","particles-js");
+	loadParticles();
 	$(".main-page").toggleClass("main-page-active-projects");
 	$(".projects-page").toggleClass("projects-page-active");
 });
@@ -107,6 +108,13 @@ $(".show-main").on("click", e =>  {
 $(".show-about").on("click", e =>  {
 	defaultView();
 	$(".about-particles").attr("id","particles-js");
+	loadParticles();
 	$(".main-page").toggleClass("main-page-active-about");
 	$(".about-page").toggleClass("about-page-active");
 });
+
+function loadParticles(){
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', '/static/assets/particles/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+  };
