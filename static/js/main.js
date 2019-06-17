@@ -6,6 +6,8 @@ const defaultView = () => {
 	//Default main page
 	$(".main-page").removeClass("main-page-active-skills");
 	$(".main-page").removeClass("main-page-active-links");
+	$(".main-page").removeClass("main-page-active-projects");
+	$(".main-page").removeClass("main-page-active-about");
 
 	//Default buttons
 	$(".show-skills").removeClass("show-skills-active");
@@ -14,6 +16,8 @@ const defaultView = () => {
 	//Default pages
 	$(".skills-page").removeClass("skills-page-active");
 	$(".links-page").removeClass("links-page-active");
+	$(".projects-page").removeClass("projects-page-active");
+	$(".about-page").removeClass("about-page-active");
 
 };
 
@@ -74,4 +78,30 @@ $(".show-links").on("click", e => {
 
 	};
 
+});
+
+//Projects page
+
+$(".show-main").on("click", e =>  {
+	defaultView();
+});
+
+
+$(".show-projects").on("click", e =>  {
+	defaultView();
+	$(".main-page").toggleClass("main-page-active-projects")
+	$(".projects-page").toggleClass("projects-page-active");
+});
+
+//About page
+
+$(".show-main").on("click", e =>  {
+	defaultView();
+});
+
+
+$(".show-about").on("click", e =>  {
+	defaultView();
+	$(".main-page").toggleClass("main-page-active-about")
+	$(".about-page").toggleClass("about-page-active");
 });

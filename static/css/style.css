@@ -11,7 +11,8 @@ body, html {
 
 .main-container {
 	background-image: url("../back.jpg");
-	background-size: contain;
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-attachment: fixed;
 } 
 
@@ -25,12 +26,32 @@ body, html {
 	transition: 0.6s;
 }
 
+@media (max-width: 800px) {
+	.main-page {
+		flex-direction: column;
+	}
+}
+
 .main-page-active-skills {
 	transform: translateY(10vh);
 }
 
 .main-page-active-links {
-	transform: translateY(-10vh);
+	transform: translateY(-15vh);
+}
+
+.main-page-active-projects {
+	transform: translateX(-100%);
+}
+
+.main-page-active-about {
+	transform: translateX(100%);
+}
+
+@media (max-width: 800px) {
+	.main-page-active-skills {
+		transform: translateY(15vh);
+	}
 }
 
 .info {
@@ -39,7 +60,7 @@ body, html {
 
 }
 
-.main-page a {
+.main-container .main-page a {
 	display: inline-block;
 	text-decoration: none;
 	margin: 10px;
@@ -47,10 +68,11 @@ body, html {
 	font-size: 1.5em;
 	width: 100px;
 	text-align: center;
+	cursor: pointer;
 	transition: 0.5s;
 }
 
-.main-page a:hover {
+.main-container .main-page a:hover {
 	background-color: rgba(255, 255, 255, 0.8);
 	color: #000000;
 }
@@ -63,6 +85,9 @@ body, html {
 	border-bottom: 1px solid #FFF;
 }
 
+/*-------------
+  SKILLS PAGE
+-------------*/
 
 .skills-page {
 	position: fixed;
@@ -71,7 +96,9 @@ body, html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 10vh;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 15vh;
 	width: 100%;
 	padding: 10px;
 	background: rgba(255, 255, 255, 0.8);
@@ -80,11 +107,33 @@ body, html {
 	transform: translateY(-100%); 
 }
 
+@media (max-width: 800px) {
+	.skills-page {
+		height: 22vh;
+		padding-top: 0;
+		padding-right: 40px;
+	}
+}
+
+
 .skills-page-active {
 	transform: translateY(0);
 }
 
-.skills-page p {
+.skills-page div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+@media (max-width: 800px) {
+	.skills-page div {
+		margin-left: auto;
+		margin-top: 8px;
+	}
+}
+
+.skills-page div p {
 	margin: 10px;
 }
 
@@ -94,6 +143,10 @@ body, html {
 	transition: stroke-dashoffset 0.8s;
 }
 
+/*------------
+  LINKS PAGE
+------------*/
+
 .links-page {
 	position: fixed;
 	bottom: 0;
@@ -102,12 +155,12 @@ body, html {
 	justify-content: center;
 	align-content: center;
 	flex-direction: row;
-	height: 10vh;
+	height: 15vh;
 	width: 100%;
-	padding: 15px;
+	padding: 10px 0;
 	background: rgba(255, 255, 255, 0.8);
 	transition: 0.6s;
-	transform: translateY(110%); 
+	transform: translateY(100%); 
 }
 
 .links-page-active {
@@ -116,9 +169,91 @@ body, html {
 
 .links-page a {
 	width: 70px;
-	margin: 0 10px;
+	margin: auto 10px;
 }
 
 .links-page a img {
 	width: 100%;
+}
+
+/*---------------
+  PROJECTS PAGE
+---------------*/
+
+.projects-page {
+	background: rgba(255, 255, 255, 0.8);
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 100%;
+	transition: 0.6s;
+	transform: translateX(100%);
+}
+
+.projects-page-active {
+	transform: translateX(0);
+}
+
+.projects-block {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/*------------
+  ABOUT PAGE
+------------*/
+
+.about-page {
+	background: rgba(255, 255, 255, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	transition: 0.6s;
+	transform: translateX(-100%);
+}
+
+.about-page-active {
+	transform: translateX(0);
+}
+
+/*------------------
+  SOME OTHER STUFF
+------------------*/
+
+.wrapper .show-main a {
+	text-decoration: none;
+	display: inline-block;
+	text-decoration: none;
+	margin: 10px;
+	color: #000000;
+	font-size: 1.5em;
+	width: 100px;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.6s;
+}
+
+.wrapper .show-main a:hover {
+	background: #000000;
+	color: #FFF;
+}
+
+.btn-secondary {
+	background-color: rgba(0, 0, 0, 0);
+	color: #000000;
+	font-size: 1.2em;
+	border: none;
+	border-bottom: 1px solid #000000;
+	border-radius: 0;
+	transition: 0.5s;
+}
+
+.btn-secondary:hover {
+	background-color: rgba(0, 0, 0, 1);
+	color: #FFF;
 }

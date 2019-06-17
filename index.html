@@ -4,6 +4,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<title>Alexey Sadkovich</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./static/css/style.css">
 </head>
@@ -11,59 +15,107 @@
 	
 	<div class="wrapper">
 
+		<div class="about-page">
+
+			<div class="show-main text-right"><a>Main</a></div>
+
+			<div class="container text-center">
+				<h1>About</h1>
+			</div>
+
+			<div class="container mt-5">
+				<p>Web-developer</p>
+				<p>Animal lover</p>
+				<p>Not millionaire</p>
+				<p>Not playboy</p>
+				<p>Not philanthropist</p>
+			</div>
+
+		</div>
+
 		<div class="skills-page">
-			<p>HTML/CSS</p>
-			<svg class="progress-ring" width="70" height="70">
-				<circle id="circleFE" class="progress-ring__circle" stroke="white" stroke-width="3" cx="35" cy="35" r="29" fill="transparent">
-			</svg>
 
-			<p>JavaScript</p>
-			<svg class="progress-ring" width="70" height="70">
-				<circle id="circleJS" class="progress-ring__circle" stroke="white" stroke-width="3" cx="35" cy="35" r="29" fill="transparent">
-			</svg>
+			<div>
+				<p>HTML/CSS</p>
+				<svg class="progress-ring" width="70" height="70">
+					<circle id="circleFE" class="progress-ring__circle" stroke="white" stroke-width="3" cx="35" cy="35" r="29" fill="transparent">
+				</svg>
+			</div>
+			
+			<div>
+				<p>JavaScript</p>
+				<svg class="progress-ring" width="70" height="70">
+					<circle id="circleJS" class="progress-ring__circle" stroke="white" stroke-width="3" cx="35" cy="35" r="29" fill="transparent">
+				</svg>
+			</div>
 
-			<p>Golang</p>
-			<svg class="progress-ring" width="70" height="70">
-				<circle id="circleGO" class="progress-ring__circle" stroke="white" stroke-width="3" cx="35" cy="35" r="29" fill="transparent">
-			</svg>
-
-			<p>Python</p>
-			<svg class="progress-ring" width="70" height="70">
-				<circle id="circlePY" class="progress-ring__circle" stroke="white" stroke-width="3" cx="35" cy="35" r="29" fill="transparent">
-			</svg>
+			<div>
+				<p>Golang</p>
+				<svg class="progress-ring" width="70" height="70">
+					<circle id="circleGO" class="progress-ring__circle" stroke="white" stroke-width="3" cx="35" cy="35" r="29" fill="transparent">
+				</svg>
+			</div>
+			
+			<div>
+				<p>Python</p>
+				<svg class="progress-ring" width="70" height="70">
+					<circle id="circlePY" class="progress-ring__circle" stroke="white" stroke-width="3" cx="35" cy="35" r="29" fill="transparent">
+				</svg>
+			</div>
+			
 		</div>
 
 		<div class="main-container">
 			
 			<div class="main-page" id="mainPage">
 	
-				<a href="#" class="show-skills">Skills</a>
-				<a href="#" class="show-links">Links</a>
+				<a class="show-skills">Skills</a>
+				<a class="show-links">Links</a>
 
 				<div class="info">
 					<h2>Alexey Sadkovich</h2>
 				</div>
 
-				<a href="#" class="show-about">About</a>
-				<a href="#" class="show-projects">Projects</a>
+				<a class="show-about">About</a>
+				<a class="show-projects">Projects</a>
 			</div>
 
 		</div>
 
 		<div class="projects-page">
+
+			<div class="show-main text-left"><a>Main</a></div>
+
+			<div class="container text-center">
+				<h1>Projects</h1>
+			</div>
+	
+			<div class="container mt-5 projects-block">
+
+				<div class="card m-2 boder border-secondary" style="max-width: 18rem;">
+				  <img src="./static/images/rategame_main.png" class="card-img-top" alt="Rategame">
+				  <div class="card-body">
+				    <h5 class="card-title">Rategame</h5>
+				    <p class="card-text">Frontend & Backend</p>
+				    <a href="./rategame.html" class="btn btn-secondary">View</a>
+				  </div>
+				</div>
+
+			</div>
 			
 		</div>
 
 		<div class="links-page">
+
 			<a href="https://vk.com/id277270797"><img src="./static/icons/vk.svg" alt=""></a>
 			<a href="https://t.me/VozmakGer"><img src="./static/icons/telegram.svg" alt=""></a>
 			<a href="https://github.com/Pix-head"><img src="./static/icons/github.svg" alt=""></a>
 			<a href="https://www.instagram.com/alekseisadkovich/"><img src="./static/icons/instagram.svg" alt=""></a>
+
 		</div>
 
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="./static/js/main.js"></script>
 	<script src="./static/js/progress.js"></script>
 
