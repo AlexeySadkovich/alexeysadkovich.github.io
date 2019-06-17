@@ -118,3 +118,4 @@ function loadParticles(){
     particlesJS.load('particles-js', '/static/assets/particles/particles.json', function() {
         console.log('callback - particles.js config loaded');
   };
+};
