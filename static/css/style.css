@@ -230,9 +230,9 @@ body, html {
 	transform: translateX(0);
 }
 
-.about-page .show-main,
-.about-page .container {
-	z-index: 2;	
+.about-page-active .show-main,
+.about-page-active .container {
+	z-index: 99;	
 }
 
 /*------------------
