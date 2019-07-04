@@ -14,6 +14,7 @@ body, html {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-position: right;
 } 
 
 .main-page {
@@ -267,6 +268,7 @@ body, html {
 --------------*/
 .project-page {
 	background-image: url("../back.jpg");
+	background-position: right;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
