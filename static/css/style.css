@@ -161,6 +161,13 @@ body, html {
 	transition: stroke-dashoffset 0.8s;
 }
 
+.progress-ring p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 99;
+}
+
 /*------------
   LINKS PAGE
 ------------*/
@@ -238,6 +245,28 @@ body, html {
 .about-page-active {
 	transform: translateX(0);
 }
+/*--------------
+  PROJECT PAGE
+--------------*/
+.project-page {
+	background-image: url("../back.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding-bottom: 5%;
+	color: #FFF;
+	overflow: auto;
+}
+
+.projects-images img {
+	width: 70%;
+	margin-top: 50px;
+	padding: 5px;
+	border: 1px solid #FFF;
+}
+
+
+
 
 /*------------------
   SOME OTHER STUFF
@@ -290,4 +319,35 @@ body, html {
 	height: 100vh;
 	width: 100%;
 	z-index: 99;
+}
+
+.project-page .show-main a {
+	text-decoration: none;
+	display: inline-block;
+	text-decoration: none;
+	margin: 10px;
+	color: #FFF;
+	font-size: 1.5em;
+	width: 100px;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.6s;
+}
+
+.project-page .show-main a:hover {
+	background: #FFF;
+	color: #000000;
+}
+
+#toTop {
+	width: 50px;
+	background-color: #FFF;
+	color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	padding: 5px;
+	position: fixed;
+	bottom: 30px;
+	right: 50px;
+	cursor: pointer;
 }

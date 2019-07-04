@@ -1,3 +1,28 @@
+$(document).ready(function() {
+	$('#toTop').hide();
+	 
+	$(window).scroll( () => {
+	 
+		if($(window).scrollTop() > 50) {
+		 
+			$('#toTop').fadeIn();
+		 
+		} else {
+		 
+			$('#toTop').fadeOut();
+		 
+		};
+		 
+	});
+	 
+	$('#toTop').bind('click', () => {
+ 
+		$('body,html').animate({scrollTop:0}, 500);
+	 
+	});
+	 
+});
+
 var skillsOpen = false;
 var linksOpen  = false;
 
@@ -119,3 +144,4 @@ function loadParticles(){
         console.log('callback - particles.js config loaded');
   });
 };
+
