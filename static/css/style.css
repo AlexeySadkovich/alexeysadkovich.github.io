@@ -284,8 +284,14 @@ body, html {
 	border: 1px solid #FFF;
 }
 
-
-
+@media (max-width: 800px) {
+	.projects-images img {
+	width: 100%;
+	margin-top: 20px;
+	padding: 5px;
+	border: 1px solid #FFF;
+}
+}
 
 /*------------------
   SOME OTHER STUFF
