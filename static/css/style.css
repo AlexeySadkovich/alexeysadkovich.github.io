@@ -127,8 +127,8 @@ body, html {
 
 @media (max-width: 800px) {
 	.skills-page {
-		height: 22vh;
-		padding-top: 0;
+		height: 25vh;
+		padding: 0;
 		padding-right: 40px;
 	}
 }
@@ -147,7 +147,24 @@ body, html {
 @media (max-width: 800px) {
 	.skills-page div {
 		margin-left: auto;
-		margin-top: 8px;
+		margin-top: 5px;
+		max-width: 50%;
+	}
+}
+
+@media (max-width: 400px) {
+	.skills-page {
+		flex-direction: row;
+		justify-content: center;
+		height: 30vh;
+		padding-top: 5px;
+		padding-right: 20px;
+	}
+
+	.skills-page div {
+		margin-left: auto;
+		margin-top: 3px;
+		max-width: 50%;
 	}
 }
 
