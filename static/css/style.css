@@ -59,10 +59,11 @@ body, html {
 	margin-right: 20px;
 	margin-left: 20px;
     position: relative;
-    padding-top: 5px;
+	padding-top: 5px;
+	overflow: hidden;
 }
 
-.info:before {
+.info:after {
     content: '';
     position: absolute;
     top: 0;
@@ -75,13 +76,34 @@ body, html {
     transform: scaleX(0);
 }
 
-.info-active:before {
+.info-active:after {
     transform: scale(1);
+}
+
+.info:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1.5em;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.6);
+	transform: translateX(-4em) skewX(-45deg);
+}
+
+.info:hover:before {
+	animation: move-light .4s;
+}
+
+@keyframes move-light {
+	from {transform: translateX(-4em) skewX(-45deg);}
+	to {transform: translateX(15em) skewX(-45deg);}
 }
 
 .main-container .main-page a {
 	display: inline-block;
 	text-decoration: none;
+	position: relative;
 	margin: 10px;
 	color: #FFF;
 	font-size: 1.5em;
